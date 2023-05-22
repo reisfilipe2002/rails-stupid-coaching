@@ -3,14 +3,13 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    @answer = params[:question]
-    # if @answer.include?('?')
-    #   @coach_answer = 'Silly question, get dressed and go to work!.'
-    # elsif @answer == 'I am going to work'
-    #   @coach_answer = 'Great!'
-    # else
-    #   @coach_answer = "I don't care, get dressed and go to work!"
-    # end
-    puts "answer: #{@answer}"
+    @question = params[:question]
+    if @question.include?('?')
+      @coach_answer = 'Silly question, get dressed and go to work!.'
+    elsif @question.downcase == 'i am going to work'
+      @coach_answer = 'Great!'
+    else
+      @coach_answer = "I don't care, get dressed and go to work!"
+    end
   end
 end

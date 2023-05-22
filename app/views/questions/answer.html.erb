@@ -1,1 +1,12 @@
-<%= @answer %>
+<div class = "container">
+<h1>Stupid Coaching</h1>
+<div class = "card">
+<p><%= @question %></p>
+<p>-You</p>
+</div>
+<div class = "card mt-3 bg-warning " >
+<p><%= @coach_answer %></p>
+<p>-Your coach</p>
+</div>
+<%= link_to "Back to home", "/ask", class: "btn btn-secondary mt-2" %>
+</div>
